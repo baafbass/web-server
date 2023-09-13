@@ -3,10 +3,9 @@ app = Flask(__name__)
 
 print(__name__)
 
-@app.route('/')
-def hello_world():
-    print(url_for('static', filename='computer.png'))
-    return render_template('index.html')
+@app.route('/<username>/<int:post_id>')
+def hello_world(username=None,post_id=None):
+    return render_template('index.html', name = username,post_id = post_id)
 
 @app.route('/about.html')
 def aboutme():
