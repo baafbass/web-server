@@ -2,18 +2,22 @@ from flask import Flask,render_template,url_for
 app = Flask(__name__)
 
 @app.route('/')
-def myhome():
+def my_home():
     return render_template('index.html')
 
 @app.route('/about.html')
-def aboutme():
+def about():
     return render_template('about.html')
 
+@app.route('/experience.html')
+def experience():
+    return render_template('experience.html')
 
-@app.route('/favicon.ico')
-def blog():
-    return 'this are my thought on blogs!'
+@app.route('/portfolio.html')
+def portfolio():
+    return render_template('portfolio.html')
 
-@app.route('/blog/2023/myFam')
-def blog2():
-    return 'I really love my Familly!'
+@app.route('/contact.html')
+def contact():
+    return render_template('contact.html')
+
