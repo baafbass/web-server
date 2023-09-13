@@ -12,7 +12,7 @@ def aboutme():
     return render_template('about.html')
 
 
-@app.route('/blog')
+@app.route('/favicon.ico')
 def blog():
     return 'this are my thought on blogs!'
 
