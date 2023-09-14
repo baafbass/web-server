@@ -26,11 +26,21 @@ def portfolio():
 def contact():
     return render_template('contact.html')
 
+def write_to_file(data):
+    with open('database.txt',mode='a') as database:
+        name = data['name']
+        email = data['email']
+        subject = data['subject']
+        message = data['message']
+        file = database.write(f'\n{name},{email},{subject},{message}')
+
 
 @app.route('/submit_form', methods=['POST', 'GET'])
 def submit_form():
     if request.method == 'POST':
         data = request.form.to_dict()
+        write_to_file(data)
         return redirect('formresult1.html')
     else:
         return 'Something went wrong. Try again'
+
