@@ -1,3 +1,2 @@
 name,email,subject,message
 Farid,faridbassirou7898@gmail.com,Test,Test for backend
-Nabila,nabilabassirou7898@gmail.com,Money,I have a new business idea my brother
